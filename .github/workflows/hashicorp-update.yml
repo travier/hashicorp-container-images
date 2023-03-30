@@ -1,6 +1,6 @@
 name: "Check for updates for images for Hashicorp projects"
 
-# Run weekly or on demand
+# Run daily or on demand
 on:
   schedule:
     - cron:  '0 0 * * *'
