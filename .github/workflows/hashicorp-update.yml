@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Import Hashicorp public OpenPGP key
         shell: bash
@@ -42,7 +44,7 @@ jobs:
       - name: Check for updates
         run: ci/update_hashicorp.sh
 
-      - name: Create a PR if changes have been made
+      - name: Push the update if changes have been made
         shell: bash
         run: |
           set -euxo pipefail
@@ -50,6 +52,4 @@ jobs:
           if [[ "${current_commit}" == "${GITHUB_SHA}" ]]; then
             exit 0
           fi
-          git push --force origin HEAD:refs/heads/hashicorp-update
-          # Allow this to fail if the PR already exists
-          gh pr create --base main --head hashicorp-update --title 'Update Hashicorp container images' --body 'Created by Github action' || true
+          git push origin HEAD:refs/heads/main
