@@ -14,8 +14,8 @@ RUN unzip "${NAME}_${VERSION}_linux_amd64.zip"
 
 # From https://github.com/hashicorp/nomad-driver-podman/releases
 ARG DRIVER_NAME="nomad-driver-podman"
-ARG DRIVER_VERSION="0.4.1"
-ARG DRIVER_SHA256="64d78edef0ac89980508749383ff5901840f28a537f4c7ec41fae6f596f13f0e  nomad-driver-podman_0.4.1_linux_amd64.zip"
+ARG DRIVER_VERSION="0.4.2"
+ARG DRIVER_SHA256="bdf7c9f70c79d3d3055e73fdc6212a9bfc221ed824451be2d07b2c62ce4267c4  nomad-driver-podman_0.4.2_linux_amd64.zip"
 
 RUN curl -O "https://releases.hashicorp.com/${DRIVER_NAME}/${DRIVER_VERSION}/${DRIVER_NAME}_${DRIVER_VERSION}_linux_amd64.zip"
 RUN echo "${DRIVER_SHA256}" | sha256sum --check
