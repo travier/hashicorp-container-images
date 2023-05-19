@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:37 as unzip
+FROM registry.fedoraproject.org/fedora:38 as unzip
 
 RUN dnf -y install unzip && \
     dnf clean all
@@ -12,7 +12,7 @@ RUN curl -O "https://releases.hashicorp.com/${DRIVER_NAME}/${DRIVER_VERSION}/${D
 RUN echo "${DRIVER_SHA256}" | sha256sum --check
 RUN unzip "${DRIVER_NAME}_${DRIVER_VERSION}_linux_amd64.zip"
 
-FROM registry.fedoraproject.org/fedora:36
+FROM registry.fedoraproject.org/fedora:38
 
 # Keep container image for ~2 months
 LABEL quay.expires-after=8w
