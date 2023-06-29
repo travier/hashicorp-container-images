@@ -2,8 +2,8 @@ FROM registry.fedoraproject.org/fedora:38 as unzip
 
 # From https://developer.hashicorp.com/consul/downloads
 ARG NAME="consul"
-ARG VERSION="1.15.3"
-ARG SHA256="86c6fe308d2e4eea106d21e20c307726eb87be87eab1f6dfb0d53db81b31d334  consul_1.15.3_linux_amd64.zip"
+ARG VERSION="1.16.0"
+ARG SHA256="c112d1b2ffcfa7d98cde5508bec3bce383ed3650290cc8be3cfe682b79bb13f1  consul_1.16.0_linux_amd64.zip"
 
 RUN dnf -y install unzip && \
     dnf clean all
