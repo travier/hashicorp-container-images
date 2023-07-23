@@ -5,8 +5,8 @@ RUN dnf -y install unzip && \
 
 # From https://developer.hashicorp.com/nomad/downloads
 ARG NAME="nomad"
-ARG VERSION="1.6.0"
-ARG SHA256="c67a4874439b74a25751ebc5549f9873bc9db937d4509403c84e32cef4dae001  nomad_1.6.0_linux_amd64.zip"
+ARG VERSION="1.6.1"
+ARG SHA256="e4c01c51c393b266aee4ff184dd97704ae3d838c233a6189425a9f1c31a55f4f  nomad_1.6.1_linux_amd64.zip"
 
 RUN curl -O "https://releases.hashicorp.com/${NAME}/${VERSION}/${NAME}_${VERSION}_linux_amd64.zip"
 RUN echo "${SHA256}" | sha256sum --check
