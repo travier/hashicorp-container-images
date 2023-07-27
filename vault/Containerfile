@@ -2,8 +2,8 @@ FROM registry.fedoraproject.org/fedora:38 as unzip
 
 # From https://developer.hashicorp.com/vault/downloads
 ARG NAME="vault"
-ARG VERSION="1.14.0"
-ARG SHA256="3d5c27e35d8ed43d861e892fc7d8f888f2fda4319a36f344f8c09603fb184b50  vault_1.14.0_linux_amd64.zip"
+ARG VERSION="1.14.1"
+ARG SHA256="6031432dfc3de07f6523d206c44fc018aa969d94c8e9125a77340af359f57ea3  vault_1.14.1_linux_amd64.zip"
 
 RUN dnf -y install unzip && \
     dnf clean all
