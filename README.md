@@ -1,3 +1,11 @@
+# Archived as Hashicorp projects are no longer open source
+
+See https://www.hashicorp.com/blog/hashicorp-adopts-business-source-license
+
+Original README below.
+
+---
+
 # Containerfiles for Hashicorp projects
 
 Those containers are built using GitHub Actions and hosted on Quay.io.
